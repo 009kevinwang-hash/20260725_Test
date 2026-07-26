@@ -1,65 +1,13 @@
-
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titanic 生存預測</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Titanic 生存預測</h1>
-        <form id="predictionForm">
-            <div>
-                <label for="pclass">艙等 (Pclass):</label>
-                <select id="pclass" name="Pclass" required>
-                    <option value="1">1 (頭等艙)</option>
-                    <option value="2">2 (二等艙)</option>
-                    <option value="3" selected>3 (三等艙)</option>
-                </select>
-            </div>
-            <div>
-                <label>性別 (Sex):</label>
-                <input type="radio" id="male" name="Sex" value="male" checked>
-                <label for="male">男性</label>
-                <input type="radio" id="female" name="Sex" value="female">
-                <label for="female">女性</label>
-            </div>
-            <div>
-                <label for="age">年齡 (Age):</label>
-                <input type="number" id="age" name="Age" min="0" max="100" value="28" required>
-            </div>
-            <div>
-                <label for="sibsp">兄弟姐妹/配偶數 (SibSp):</label>
-                <input type="number" id="sibsp" name="SibSp" min="0" value="0" required>
-            </div>
-            <div>
-                <label for="parch">父母/子女數 (Parch):</label>
-                <input type="number" id="parch" name="Parch" min="0" value="0" required>
-            </div>
-            <div>
-                <label for="fare">票價 (Fare):</label>
-                <input type="number" id="fare" name="Fare" min="0" step="0.01" value="30" required>
-            </div>
-            <div>
-                <label for="embarked">登船港口 (Embarked):</label>
-                <select id="embarked" name="Embarked" required>
-                    <option value="S" selected>S (南安普敦)</option>
-                    <option value="C">C (瑟堡)</option>
-                    <option value="Q">Q (皇后鎮)</option>
-                </select>
-            </div>
-            <div>
-                <label for="name">姓名 (Name):</label>
-                <input type="text" id="name" name="Name" value="" placeholder="選填，用於提取稱謂">
-            </div>
-            <button type="submit">預測生存機率</button>
-        </form>
-        <div id="result" class="result-box">
-            <p>預測結果將顯示在這裡。</p>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titanic Survival Prediction</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
