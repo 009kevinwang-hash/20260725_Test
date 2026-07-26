@@ -1,0 +1,43 @@
+{
+  "model_name": "SVM",
+  "feature_columns": [
+    "Pclass",
+    "Sex",
+    "Age",
+    "SibSp",
+    "Parch",
+    "Fare",
+    "Embarked",
+    "Title",
+    "FamilySize",
+    "IsAlone",
+    "AgeBand",
+    "IsChild",
+    "FareBand",
+    "FareLog",
+    "NameLength"
+  ],
+  "title_mapping": {
+    "Mr": 0,
+    "Miss": 1,
+    "Mrs": 2,
+    "Master": 3,
+    "Rare": 4
+  },
+  "ageband_mapping": {
+    "Infant": 0,
+    "Child": 1,
+    "Teenager": 2,
+    "Young_Adult": 3,
+    "Adult": 4,
+    "Senior": 5
+  },
+  "fareband_mapping": {
+    "Low": 0,
+    "Medium": 1,
+    "High": 2,
+    "Very_High": 3
+  },
+  "age_median": 28.0,
+  "embarked_mode": 0
+}
