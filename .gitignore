@@ -74,3 +74,6 @@ Thumbs.db
 
 # ruff
 .ruff_cache/
+
+# Secrets
+token.txt
