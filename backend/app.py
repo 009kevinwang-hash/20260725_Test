@@ -81,3 +81,10 @@ async def predict_survival(data: PassengerData):
 @app.get('/health')
 async def health_check():
     return {'status': 'healthy', 'model': metadata['model_name']}
+
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    # Flask 範例:
+    app.run(host="0.0.0.0", port=port)
