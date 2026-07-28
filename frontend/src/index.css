@@ -1,1 +1,68 @@
 @import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --col: #27272a;
+  --bg-card: #ffffff;
+  --border: #e5e7eb;
+  --border-focus: #3b82f6;
+  --primary: #f97316;
+  --primary-hover: #ea580c;
+  --text-muted: #64748b;
+  --input-bg: #ffffff;
+  --input-bg-hover: #f9fafb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--col);
+  -webkit-font-smoothing: antialiased;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/backpic.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f19;
+    --col: #e2e8f0;
+    --bg-card: #131a2b;
+    --border: #1e293b;
+    --border-focus: #3b82f6;
+    --text-muted: #94a3b8;
+    --input-bg: #1e293b;
+    --input-bg-hover: #263349;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--col);
+    background-image: linear-gradient(rgba(11, 15, 25, 0.92), rgba(11, 15, 25, 0.92)), url('/backpic.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .gradio-header { border-color: var(--border); background: rgba(11, 15, 25, 0.85); }
+  .gradio-card { background: var(--bg-card); border-color: var(--border); }
+  .gradio-input { background: var(--input-bg); border-color: var(--border); color: var(--col); }
+  .gradio-input:focus { border-color: var(--border-focus); box-shadow: 0 0 0 3px rgba(59,130,246,0.15); }
+  .gradio-input option { background: #1e293b; color: var(--col); }
+  .gradio-tab { color: var(--text-muted); border-color: transparent; }
+  .gradio-tab.active { color: var(--primary); border-color: var(--primary); background: rgba(249,115,22,0.05); }
+  .gradio-tab:hover { background: rgba(255,255,255,0.03); }
+  .gradio-prediction-card[data-survived="true"] { background: linear-gradient(135deg, rgba(19,115,51,0.15), rgba(19,115,51,0.05)); border-color: rgba(19,115,51,0.3); color: #86efac; }
+  .gradio-prediction-card[data-survived="false"] { background: linear-gradient(135deg, rgba(197,34,31,0.15), rgba(197,34,31,0.05)); border-color: rgba(197,34,31,0.3); color: #fca5a5; }
+  .gradio-placeholder { border-color: var(--border); background: rgba(255,255,255,0.02); }
+  .gradio-footer { border-color: var(--border); color: var(--text-muted); background: rgba(11, 15, 25, 0.9); }
+}

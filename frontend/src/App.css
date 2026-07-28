@@ -1,1 +1,359 @@
+.gradio-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
+/* Header */
+.gradio-header {
+  border-bottom: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.gradio-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+.gradio-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.025em;
+}
+
+.gradio-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.status-badge {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  vertical-align: middle;
+}
+
+/* Main */
+.gradio-main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  width: 100%;
+}
+
+/* Tabs */
+.gradio-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.gradio-tab {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border-radius: 8px 8px 0 0;
+}
+
+.gradio-tab:hover {
+  background: #f8fafc;
+  color: #334155;
+}
+
+.gradio-tab.active {
+  color: #ea580c;
+  border-bottom-color: #ea580c;
+  background: rgba(249, 115, 22, 0.04);
+}
+
+/* Content Grid */
+.gradio-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .gradio-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.gradio-card {
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Section Title */
+.gradio-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #c2410c;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Form Fields */
+.gradio-field {
+  margin-bottom: 14px;
+}
+
+.gradio-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin-bottom: 4px;
+}
+
+.gradio-hint {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.gradio-input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.gradio-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.gradio-input::placeholder {
+  color: #9ca3af;
+}
+
+select.gradio-input {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+select.gradio-input option {
+  background: #ffffff;
+  color: #1e293b;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/* Grid Rows */
+.gradio-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.gradio-row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 480px) {
+  .gradio-row-2,
+  .gradio-row-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Button */
+.gradio-button {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.gradio-button.primary {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+}
+
+.gradio-button.primary:hover {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+  transform: translateY(-1px);
+}
+
+.gradio-button.primary:active {
+  transform: translateY(0);
+}
+
+.gradio-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Error */
+.gradio-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #fecaca;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+/* Placeholder */
+.gradio-placeholder {
+  border: 2px dashed #e2e8f0;
+  border-radius: 12px;
+  padding: 48px 24px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+/* Prediction Card */
+.gradio-prediction-card {
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.gradio-prediction-card[data-survived="true"] {
+  background: linear-gradient(135deg, #e6f4ea, #d1fae5);
+  border: 1.5px solid rgba(19, 115, 51, 0.25);
+  color: #137333;
+}
+
+.gradio-prediction-card[data-survived="false"] {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border: 1.5px solid rgba(197, 34, 31, 0.25);
+  color: #991b1b;
+}
+
+/* Probability Bars */
+.gradio-prob-bars {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+/* Detail Grid */
+.gradio-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .gradio-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Info Grid */
+.gradio-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+  .gradio-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Info Section */
+.gradio-info-section {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 18px 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.gradio-info-section h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.gradio-feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.gradio-feature-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Footer */
+.gradio-footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 20px 24px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Gradio Markdown-style heading */
+.gradio-section-title {
+  font-family: 'Source Sans Pro', ui-sans-serif, system-ui, sans-serif;
+}
