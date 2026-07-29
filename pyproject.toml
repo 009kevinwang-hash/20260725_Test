@@ -9,4 +9,6 @@ dependencies = [
     "joblib",
     "numpy",
     "pydantic",
+    "scikit-learn",
+    "uvicorn",
 ]
